@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores'
+  import App1 from '../components/App1.svelte'
 </script>
 
 <header class="d-flex justify-content-center py-3">

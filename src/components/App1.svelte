@@ -1,5 +1,6 @@
 <script>
   export let name
+  //export let homeTask = [{homeTask1: 'Groceries', 'Laundery' }];
 </script>
 
 <main>
