@@ -3,6 +3,7 @@
   //export let homeTask = [{homeTask1: 'Groceries', 'Laundery' }];
 </script>
 
+<!-- 
 <main>
   <h1>Hello {name}!</h1>
   <slot />
@@ -11,6 +12,7 @@
     how to build Svelte apps.
   </p>
 </main>
+-->
 
 <style>
   main {
