@@ -21,12 +21,12 @@
   }
 </script>
 
-<main>
+<main class="h3 backcolor centered loner">
   <h1>{taskname}</h1>
-
-  <input type="text" bind:value={newTask} placeholder="Enter a new task" />
-
-  <button on:click={addTask}>Add Task</button>
+  <div>
+    <input type="text" bind:value={newTask} placeholder="Enter a new task" />
+    <button on:click={addTask}>Add Task</button>
+  </div>
 
   <ul>
     {#each tasks as task (task.id)}
@@ -37,11 +37,15 @@
           on:change={() => toggleCompletion(task.id)}
         />
         <span>{task.text}</span>
-        <button on:click={() => deleteTask(task.id)}>Delete Task</button>
+        <div class="rightt">
+          <button on:click={() => deleteTask(task.id)}>Delete Task</button>
+        </div>
       </li>
     {/each}
   </ul>
 </main>
+
+<!-- 
 
 <div class="page-content page-container" id="page-content">
   <div class="padding">
@@ -128,8 +132,31 @@
   </div>
 </div>
 
+-->
+
 <style>
   .completed {
     text-decoration: line-through;
+  }
+
+  .backcolor {
+    background-color: #ff3e00;
+    border: #2d7cad 2em;
+  }
+  .centered {
+    text-align: center;
+  }
+  .leftt {
+    text-align: left;
+  }
+  .rightt {
+    text-align: right;
+    vertical-align: right;
+    align-self: right;
+    flex-wrap: wrap;
+    position: sticky center right;
+  }
+  .loner {
+    min-height: 600px;
   }
 </style>
