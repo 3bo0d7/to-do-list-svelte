@@ -21,6 +21,7 @@
   }
 </script>
 
+
 <main class="h3 backcolor centered loner">
   <h1>{taskname}</h1>
   <div>
@@ -142,6 +143,7 @@
   .backcolor {
     background-color: #ff3e00;
     border: #2d7cad 2em;
+    background: #ff3e00;
   }
   .centered {
     text-align: center;

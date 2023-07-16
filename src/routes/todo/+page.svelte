@@ -1,4 +1,5 @@
 <script>
+  import { dataset_dev } from 'svelte/internal'
   import App1 from '../../components/App1.svelte'
   import TodoList from '../../components/TodoList.svelte'
 
@@ -13,17 +14,35 @@
 
 <form method="POST">
   <label class="mb-3">
-    Email
-    <input name="email" type="email" class="form-control" />
+    Task Name
+    <input name="taskName" type="text" class="form-control" />
   </label>
   <br />
-  <label class="mb-3">
-    Password
-    <input name="password" type="password" class="form-control" />
-  </label>
-  <br />
-  <button class="btn btn-primary">Log in</button>
+
+  <button class="btn btn-primary">Create Task</button>
 </form>
+<ul>
+  {#each data.tasks as task}
+    <li>{task.id}, {task.text}, {task.completed}</li>
+  {/each}
+</ul>
+
+<table class="col-8 table table-hover">
+  <tr style="background-color: dodgerblue;">
+    <th>id</th>
+    <th>name</th>
+    <th>status</th>
+  </tr>
+  <br />
+
+  {#each data.tasks as task}
+    <tr>
+      <td>{task.id}</td>
+      <td>{task.text}</td>
+      <td>{task.completed}</td>
+    </tr>
+  {/each}
+</table>
 <br />
 
 <p>choose one of the Following :</p>
